@@ -86,6 +86,13 @@ const data = [
     thirdParagraph: `Hodor hodor - hodor... Hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor hodor hodor hodor hodor; hodor hodor? Hodor!
           Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
+  },
+  {
+    title: 'Bananas, what could go wrong?',
+    date: 'June 8th, 2021',
+    firstParagraph: 'OH NO, NOT THE BANANAS',
+    secondParagraph: 'Well, we seem to be recovering from the initial attack...',
+    thirdParagraph: 'My children are singing the I am a banana song, if that tells anything of what is happening. Help me.'
   }
 ];
 
@@ -114,3 +121,45 @@ const data = [
   Step 5: Try adding new article object to the data array. Make sure it is in the same format as the others.
   Refresh the page to see the new article.
 */
+
+function articleMaker (article) {
+
+  const mainDiv = document.createElement('div')
+  const titleH2 = document.createElement('h2')
+  const dateP = document.createElement('p')
+  const body1 = document.createElement('p')
+  const body2 = document.createElement('p')
+  const body3 = document.createElement('p')
+  const buttonSpan = document.createElement('span')
+
+  mainDiv.appendChild(titleH2)
+  mainDiv.appendChild(dateP)
+  mainDiv.appendChild(body1)
+  mainDiv.appendChild(body2)
+  mainDiv.appendChild(body3)
+  mainDiv.appendChild(buttonSpan)
+
+  mainDiv.classList.add('article')
+  dateP.classList.add('date')
+  buttonSpan.classList.add('expandButton')
+  buttonSpan.textContent = '+'
+  titleH2.textContent = article.title
+  dateP.textContent = article.date
+  body1.textContent = article.firstParagraph
+  body2.textContent = article.secondParagraph
+  body3.textContent = article.thirdParagraph
+
+  buttonSpan.addEventListener('click', () => {
+    mainDiv.classList.toggle('article-open')
+  })
+
+  return mainDiv
+
+}
+
+const div1 = document.querySelector('div.articles')
+
+data.forEach(article => {
+  const newArticle = articleMaker(article)
+  div1.appendChild(newArticle)
+})
