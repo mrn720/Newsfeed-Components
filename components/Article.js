@@ -86,6 +86,13 @@ const data = [
     thirdParagraph: `Hodor hodor - hodor... Hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor hodor hodor hodor hodor; hodor hodor? Hodor!
           Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
+  },
+  {
+    title: 'Bananas, what could go wrong?',
+    date: 'June 8th, 2021',
+    firstParagraph: 'OH NO, NOT THE BANANAS',
+    secondParagraph: 'Well, we seem to be recovering from the initial attack...',
+    thirdParagraph: 'My children are singing the I am a banana song, if that tells anything of what is happening. Help me.'
   }
 ];
 
