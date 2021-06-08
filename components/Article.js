@@ -158,7 +158,6 @@ function articleMaker (article) {
 }
 
 const div1 = document.querySelector('div.articles')
-console.log(div1)
 
 data.forEach(article => {
   const newArticle = articleMaker(article)
