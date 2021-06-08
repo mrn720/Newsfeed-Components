@@ -1,3 +1,5 @@
+import {gsap} from 'gsap'
+
 // This is the data we will be using, study it but don't change anything, yet.
 
 let menuItems = [
@@ -51,6 +53,7 @@ function menuMaker (array) {
 
   menuButton.addEventListener('click', () => {
     menuDiv.classList.toggle('menu--open')
+    gsap.fromTo(menuDiv, {x: -500}, {duration: 2, x: -50 })
   })
 
   return menuDiv
@@ -62,3 +65,5 @@ console.log(menuH1)
 
 const menu = menuMaker(menuItems)
 menuH1.appendChild(menu)
+
+
